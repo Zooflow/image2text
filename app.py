@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 # Habilitar CORS
-CORS(app, resources={r"/*": {"origins": "https://image-to-text-khaki-theta.vercel.app"}})
+CORS(app)
 
 def clean_text(text):
     text = text.replace('\n', ' ')  # Unir líneas
