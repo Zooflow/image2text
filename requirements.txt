@@ -1,5 +1,5 @@
-Flask
-Flask-Cors
-pytesseract
-gunicorn
-pillow
+Flask==3.1.0
+pytesseract==0.3.13
+Pillow==11.1.0
+gunicorn==23.0.0
+Flask-Cors==5.0.1
