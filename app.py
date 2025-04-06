@@ -3,11 +3,13 @@ from flask_cors import CORS
 from PIL import Image
 import pytesseract
 import re
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+if os.name == 'nt':
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def clean_text(text):
     text = text.replace('\n', ' ')  # Unir líneas
