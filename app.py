@@ -8,11 +8,6 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-if os.name == 'nt':  # Windows (tu PC)
-    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-else:  # Linux (Render)
-    pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
-
 def clean_text(text):
     text = text.replace('\n', ' ')  # Unir líneas
     text = text.replace('  ', ' ')  # Espacios dobles
